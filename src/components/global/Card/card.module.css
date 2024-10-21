@@ -1,0 +1,12 @@
+.card {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em; 
+}
