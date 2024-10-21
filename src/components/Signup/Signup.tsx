@@ -9,9 +9,7 @@ export function Signup() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    signup({ name, email, password }).then((data) => {
-      console.log(data);
-    });
+    signup({ name, email, password })
   };
 
   return (
