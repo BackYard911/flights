@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { signup } from "../../api/auth";
 import { Input } from "../global/Input/Input";
+import styles from "./signup.module.css";
+import { useNavigate } from "react-router-dom";
 
 export function Signup() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    signup({ name, email, password })
+    signup({ name, email, password });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.container}>
       <Input
         type="text"
         placeholder="Name"
@@ -36,6 +40,16 @@ export function Signup() {
         required
       />
       <button type="submit">Signup</button>
+      <div>
+        <span>Already have an account?</span>
+        <button
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
+          Login
+        </button>
+      </div>
     </form>
   );
 }
