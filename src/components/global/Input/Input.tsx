@@ -3,7 +3,7 @@ import styles from "./input.module.css";
 
 export function Input(props: IInputProps) {
     return (
-        <label>
+        <label className={styles.label}>
             {props.label}
             <input
             type={props.type}

@@ -41,7 +41,7 @@ const createFlightWithPhoto = async (params: FormData) => {
       {
         headers: {
           accept: "*/*",
-        },
+        }
       },
       true
     );

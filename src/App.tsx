@@ -99,17 +99,19 @@ function App() {
 
   return (
     <>
-      <Input
-        type="text"
-        maxLength={6}
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search..."
-        required={false}
-      />
-      <Link to="/create-flight">
-        <button>Create Flight</button>
-      </Link>
+      <div className="header">
+        <Input
+          type="text"
+          maxLength={6}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search..."
+          required={false}
+        />
+        <Link to="/create-flight">
+          <button>Create Flight</button>
+        </Link>
+      </div>
       {flights?.length ? (
         <>
           <Table
@@ -130,7 +132,7 @@ function App() {
           />
         </>
       ) : (
-        <div>No Results</div>
+        <div className="no-results">No Results</div>
       )}
       {imagePreviewSrc && (
         <ImagePreview

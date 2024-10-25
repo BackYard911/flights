@@ -9,13 +9,18 @@ const request = async <T>(
   url: string,
   options: RequestInit = {}
 ): Promise<T> => {
+  const headers = {
+    ...(options.headers || {}),
+    "Authorization": `Bearer ${localStorage.getItem("token")}`,
+  };
+
+  if (options.body && typeof options.body === "string") {
+    headers["Content-Type"] = "application/json";
+  }
+
   const response = await fetch(url, {
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${localStorage.getItem("token")}`,
-      ...options.headers,
-    },
     ...options,
+    headers,
   });
 
   if (response.status === 400) {

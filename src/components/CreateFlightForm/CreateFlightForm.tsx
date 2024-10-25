@@ -177,7 +177,7 @@ function CreateFlightForm({ isEdit }: ICreateFlightFormProps) {
         )}
         <ImageUpload onImageSelect={handleImageSelect} />
         <br />
-        <input disabled={codeExists} type="submit" value="Submit" />
+        <button disabled={codeExists} type="submit">Submit</button>
       </form>
     </div>
   );
