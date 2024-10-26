@@ -18,6 +18,7 @@ export function Signup() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
+      <h1>Signup</h1>
       <Input
         type="text"
         placeholder="Name"

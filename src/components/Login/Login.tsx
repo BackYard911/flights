@@ -18,6 +18,7 @@ export function Login() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
+      <h1>Login</h1>
       <Input
         type="email"
         placeholder="Email"

@@ -1,0 +1,15 @@
+.pagination {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pagination-buttons-container {
+    grid-column: 2/3;
+}
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}

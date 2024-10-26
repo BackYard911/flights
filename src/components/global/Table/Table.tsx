@@ -11,7 +11,7 @@ function Table({ headers, data, onImageClick, deleteFlight }: ITableProps) {
   return (
     <>
       {windowSize[0] > 768 ? (
-        <table>
+        <table cellSpacing={0}>
           <thead>
             <tr>
               {headers.map((header) => (
