@@ -18,20 +18,20 @@ function Pagination({
     }),
     control: (provided: CSSObjectWithLabel) => ({
       ...provided,
-      background: "#1A1A1A",
-      borderColor: "#1A1A1A",
+      background: "#394d6b",
+      borderColor: "#394d6b",
       borderRadius: "0.5em",
       color: "white",
       "&:hover": {
-        borderColor: "#1A1A1A",
+        borderColor: "#394d6b",
       },
     }),
     menu: (provided: CSSObjectWithLabel) => ({
       ...provided,
-      background: "#1A1A1A",
+      background: "#394d6b",
       color: "white",
       "&:hover": {
-        borderColor: "#1A1A1A",
+        borderColor: "#394d6b",
       },
     }),
     singleValue: (provided: CSSObjectWithLabel) => ({

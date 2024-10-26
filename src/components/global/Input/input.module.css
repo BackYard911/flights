@@ -5,8 +5,14 @@
     margin: 0.5em;
     height: 2.5em;
     width: 20em;
+    background-color: #394d6b;
+}
+
+input[type="file"] {
+    background-color: transparent;
 }
 
 .label {
     margin: 0.2em;
+    display: block;
 }

@@ -13,6 +13,7 @@ import { Link, useParams } from "react-router-dom";
 import { ICreateFlightFormProps } from "./createFlightForm.types";
 import { ImagePreview } from "../global/ImagePreview/ImagePreview";
 import cameraIcon from "../../assets/camera-icon.svg";
+import styles from "./createFlightForm.module.css";
 
 function CreateFlightForm({ isEdit }: ICreateFlightFormProps) {
   const id = useParams().id;
@@ -130,7 +131,7 @@ function CreateFlightForm({ isEdit }: ICreateFlightFormProps) {
         <button>Back</button>
       </Link>
       <h1>Create Flight</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.container}>
         <Input
           label="Flight Code: "
           required
