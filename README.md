@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Flights App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app for managing flights and users. You can view, edit, and create flights, create user accounts, and log in. The app is optimized for mobile and uses [Bun](https://bun.sh/) as the runtime.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Install Bun**: Make sure [Bun](https://bun.sh/) is installed.
 
-## Expanding the ESLint configuration
+2. **Install dependencies**:
+   ```bash
+   bun install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Run the app**:
+   ```bash
+   bun run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+4. **Start the server**:
+   ```bash
+   bun run server
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **View Flights**: See details about each flight.
+- **Edit Flights**: Update flight info.
+- **Create Flights**: Add new flights.
+- **User Management**: Create user accounts.
+- **Login**: Access secure features.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Libraries Used
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React-Select**: For the dropdown component. See [React-Select](https://react-select.com/home) for details.
